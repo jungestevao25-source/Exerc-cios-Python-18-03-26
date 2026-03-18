@@ -4,15 +4,12 @@ frequencia = int(input("Digite a Freqência do Aluno: "))
 import time
 import sys
 
-if frequencia < 75:
-    print("Reprovado por falta")
+if frequencia < 75 or media < 40:
+    print("Reprovado")
+elif media >=40 and media <= 59:
+    print("Recuperação")
 elif media >= 60:
     print("Aprovado")
-elif media >= 40:
-    if media <= 59:
-        print("Recuperação")
-elif media < 40:
-    print("Reprovado")
     
 print("Fechando programa ...")
 time.sleep(5)
